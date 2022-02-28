@@ -42,7 +42,7 @@ for i in old_list:
 #The filter part answers the question if the item should be transformed. '''
 
 #classic way 
-from audioop import mul
+
 
 
 old_list = [1,2,3,4,5]

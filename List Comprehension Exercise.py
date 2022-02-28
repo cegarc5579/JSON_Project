@@ -62,6 +62,8 @@ for i in original_list:
 # which contains only the positive numbers from the list, as integers.
 
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
+newlist = [x for x in numbers if > 0]
+print(newlist)
 
 
 
@@ -80,3 +82,6 @@ words = sentence.split()
 
 dict={"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Minivan": 1600, "Van": 2400, 
 "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
+
+new_list = [i.upper() for i in dict.keys() if dict[i] < 5000]
+print(new_list)
