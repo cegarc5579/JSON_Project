@@ -43,7 +43,7 @@ for u in unidata:
         univ.append(u)
 
 #graduation rate of Women over 50%
-
+#creating the empty lists where information can be stored when appending it 
 lon1,lat1, totalstu, totalstu1, totalstu2, hover_texts,lon2,lat2,lon3,lat3,hover_texts1,hover_texts2= [],[],[],[],[],[],[],[],[],[],[],[]
 #seearching for information by placing the keys and hoping to get values returned 
 for u in univ:
@@ -62,6 +62,8 @@ from plotly import offline
 #map for women grad rate over 50%
 #importing lon and lats so it can be seen
 #hover_texts allows you to view that info when hovering over the circles 
+#lat and lon exists so that is information that pops up when 
+#going over the data points in the map
 
 data = [
     {'type':'scattergeo',
@@ -131,6 +133,8 @@ for u in univ:
         totalstu2.append(size)
         hover_texts2.append(f"{uniname3}, {price}")
 '''
+#kept getting an error because there are two different instances
+#so had to use this instead just like with the csv project asked 
 for u in univ:
     try:
         price = int(u["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"])
